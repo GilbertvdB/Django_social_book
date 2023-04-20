@@ -33,6 +33,11 @@ def upload(request):
 
 
 @login_required(login_url='signin')
+def like_post(request):
+    pass
+
+
+@login_required(login_url='signin')
 def settings(request):
     user_profile = Profile.objects.get(user=request.user)
 
