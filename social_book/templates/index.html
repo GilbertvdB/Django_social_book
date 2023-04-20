@@ -292,7 +292,13 @@
                             <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
                         </div>
                         <div class="">
-                            Liked <strong> taiye</strong> and <strong> 209 Others </strong>
+                            {% if post.no_of_likes == 0 %}
+                            <p>No likes.</p>
+                            {% elif post.no_of_likes == 1 %}
+                            Liked by 1 person.
+                            {% else %}
+                            Liked by {post.no_of_likes} people.
+                            {% endif %}
                         </div>
                     </div>
 
